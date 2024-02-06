@@ -1,0 +1,16 @@
+<body>
+  <div class="menu">
+    <a routerLink="/home" class="menuLink">Home</a>
+    <a routerLink="/women" class="menuLink">Women</a>
+    <a routerLink="/men" class="menuLink">Men</a>
+    <a routerLink="/bag" class="menuLink cart-icon-container">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/007/371/939/original/bag-icon-shopping-bag-icon-bag-logo-bag-illustration-free-vector.jpg"
+        class="logo"
+      />
+      <span class="cart-count">{{ cartCount }}</span>
+    </a>
+  </div>
+
+  <router-outlet></router-outlet>
+</body>

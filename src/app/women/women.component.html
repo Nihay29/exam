@@ -1,0 +1,19 @@
+<body>
+  <div *ngFor="let item of topsWomen" class="product-container">
+    <img [src]="item.imageUrl" alt="Product Image" class="product-image" />
+    <p>ID: {{ item.id }}</p>
+    <p>Price: {{ item.price }} ₪</p>
+    <p>Sizes: {{ item.size.join(", ") }}</p>
+    <button
+      (click)="addtocart(item)"
+      class="addtobag"
+      [disabled]="!item.inStock"
+    >
+      ADD TO BAG
+    </button>
+    <p *ngIf="!item.inStock" class="outofstock">Out of Stock</p>
+
+    <br />
+    <hr />
+  </div>
+</body>
